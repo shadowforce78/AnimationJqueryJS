@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" href="regal_recup.css" rel="stylesheet"/>
+	<script type="text/javascript" src='jquery.js'></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+	<script src="teste.js"></script>
+	<link rel="icon" href="images/logo.png" type="image/x-icon">
+	<title>Connexion</title>
+</head>
+<body>
+	<header>
+		<a href="index_bis.html"><img src="images/logo.png" id="logo" alt="logo"></a>
+		<div id="nav">
+			<a href="nos_tips.php.html" id="1"><h3>Tips</h3></a>
+			<a href="nos_impacts.html" id="2"><h3>Impacts</h3></a>
+			<a href="nos_campagne.html" id="3"><h3>Nos Campagnes</h3></a>
+		</div>
+	</header>
+
+	<main>
+		<div class="partimp1">
+			<h1> Connexion administrateur</h1>
+		</div>
+		
+		<form action='connexion.php.html' method='post' id='form_connexion'>
+            <p>Identifiant: <input type='text' name='identifiant'></p>
+            <p>Mot de passe: <input type='password' name='pwd'></p>
+            <input type='submit' name='envoyer' value='Se connecter' class="bouton">
+        </form>
+    
+	</main>
+
+	<footer>
+		<div id="ne">
+			<h4>Newsletter</h4>
+		</div>
+		<div id="rs">
+			<div class="nrs">
+				<img src="images/insta.png" alt='insta'>
+				<p>@regal'recup</p>
+			</div>
+			<div class="nrs">
+				<img src="images/tik.png" alt='tik'>
+				<p>@regal'recup</p>
+			</div>
+		</div>
+		<div id="cont">
+			<h4>Nous contacter</h4>
+			<a href="mailto:Regalrecup@gmail.com">Regalrecup@gmail.com</a>
+			<a href="connexion.php.html" class="aparametre"><img src="images/parametre.png" class="parametre" alt='parametre'></a>
+		</div>
+	</footer>
+
+</body>
+</html>
