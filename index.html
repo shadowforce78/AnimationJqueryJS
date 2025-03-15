@@ -183,12 +183,15 @@
 	<!-- //////////////////////////////////////////////////////////////vibration titre h2 ///////////////////////////////////////////////////// -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
+			 // Sélectionne tous les éléments ayant la classe 'word'
 			const words = document.querySelectorAll('.word');
 
 			words.forEach(word => {
-
+// Divise le texte du mot en un tableau de lettres
 				const letters = word.textContent.split('');
+				  // Vide le texte original du mot pour insérer les lettres sous forme de <span>
 				word.textContent = '';
+				 // Crée un élément <span> pour chaque lettre et l'ajoute au mot
 				letters.forEach(letter => {
 					const span = document.createElement('span');
 					span.textContent = letter;
@@ -197,10 +200,10 @@
 					word.appendChild(span);
 				});
 
-
+// Ajoute un effet lorsque la souris survole le mot
 				word.addEventListener('mouseover', () => {
 					word.querySelectorAll('span').forEach(letter => {
-
+// Définit un intervalle pour appliquer l'effet de tremblement
 						if (!letter.intervalId) {
 							letter.intervalId = setInterval(() => {
 								const offsetX = (Math.random() - 0.5) * 10;
@@ -210,7 +213,7 @@
 						}
 					});
 				});
-
+// Remet les lettres à leur état normal lorsque la souris quitte le mot
 				word.addEventListener('mouseout', () => {
 					word.querySelectorAll('span').forEach(letter => {
 						clearInterval(letter.intervalId);
